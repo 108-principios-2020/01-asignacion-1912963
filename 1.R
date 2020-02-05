@@ -58,3 +58,4 @@ hist(conjunto$Vecinos, col="orange",xlab ="Vecinos", ylab = "frecuencia", main =
 sd(conjunto$Altura)
 sd(conjunto$Diametro)
 sd(conjunto$Vecinos)
+
