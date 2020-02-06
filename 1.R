@@ -8,6 +8,17 @@ conjunto <- source_data("https://www.dropbox.com/s/hmsf07bbayxv6m3/cuadro1.csv?d
 mean(conjunto$Altura)
 mean(conjunto$Diametro)
 mean(conjunto$Vecinos)
+mean(H.media$Altura)
+mean(H.16$Altura)
+mean(conjunto$vecinos)
+mean()
+mean(vecinos_3$Vecinos)
+mean(vecinos_4$Vecinos)
+
+
+H.media <- subset(conjunto, conjunto$Altura <= 13.9432)
+H.16 <- subset(conjunto,conjunto$Altura < 16.5)
+ts.douglasia <- conjunto$Especie == "H"| conjunto$Especie =="F"
 
 # altura  -----------------------------------------------------------------
 
@@ -59,3 +70,13 @@ sd(conjunto$Altura)
 sd(conjunto$Diametro)
 sd(conjunto$Vecinos)
 
+
+# gráficas ----------------------------------------------------------------
+
+par(mfrow=c(2,2))
+hist(Tsuga$Altura, main = "Altura especie H", 
+     col="red", xlab="frecuencia")
+hist(Douglasia$Altura, main= "Altura especie F")
+hist(Tsuga$Diametro, main = "Diametro especie H")
+hist(Douglasia$Diametro, main = "Diametro especie F")
+par(mfrow=c(1,1))
